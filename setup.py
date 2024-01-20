@@ -24,6 +24,7 @@ setup(
         'zed_subscriber = zed_pubsub.zed_sub:main',
         'frame_pub = zed_pubsub.frame_pub:main',
         'multi_topic_sub_flir = zed_pubsub.multi_topic_sub_flir:main',
+        'multi_topic_tan = zed_pubsub.multi_topic_tan:main',
         ],
     },
 )

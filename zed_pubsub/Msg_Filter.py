@@ -13,7 +13,7 @@ from sensor_msgs.msg import PointCloud2, PointField
 # from cepton_messages.msg import CeptonPointData
 import sys
 
-from registry import converts_from_numpy, converts_to_numpy
+from .registry import converts_from_numpy, converts_to_numpy
 
 import time
 
@@ -108,7 +108,7 @@ def pointcloud2_to_array(cloud_msg, squeeze=True):
     else:
         return np.reshape(cloud_arr, (cloud_msg.height, cloud_msg.width))
 
-def get_xyz_points(cloud_array, remove_nans=True, dtype=np.float):
+def get_xyz_points(cloud_array, remove_nans=True, dtype=float):
     '''Pulls out x, y, and z columns from the cloud recordarray, and returns
     a 3xN matrix.
     '''
